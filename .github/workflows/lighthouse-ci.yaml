@@ -1,0 +1,20 @@
+name: Lighthouse CI
+on:
+  schedule:
+    - cron: "0 5 * * *" # every day at 5 AM
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse Sitemap
+        id: parse-sitemap
+        uses: simenandre/parse-sitemap@v1.1.1
+        with:
+          sitemap-url: "https://www.eearomatics.com/sitemap.xml"
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          urls: "${{ steps.parse-sitemap.outputs.urls }}"
+          uploadArtifacts: true
+          temporaryPublicStorage: true
