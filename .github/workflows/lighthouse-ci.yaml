@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Parse Sitemap
+      - name: Sitemap URL Extractor
+        uses: tcarrio/sitemap-urls-extractor@1.0.0
         id: sitemap-urls
-        uses: tcarrio/sitemap-urls-extractor@v1.0.0
         with:
           sitemap-url: "https://www.eearomatics.com/sitemap.xml"
       - name: Audit URLs using Lighthouse
