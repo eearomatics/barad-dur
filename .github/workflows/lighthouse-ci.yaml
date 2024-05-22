@@ -20,4 +20,4 @@ jobs:
           urls: "${{ steps.sitemap-urls.outputs.urls }}"
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: 'lighthouserc.yaml'
+          configPath: 'lighthouserc.js'
