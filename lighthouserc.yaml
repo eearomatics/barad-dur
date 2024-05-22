@@ -1,4 +1,0 @@
-ci:
-  collect:
-    settings:
-      extraHeaders: '{"Referer":"https://lhci.eearomatics.com"}'
