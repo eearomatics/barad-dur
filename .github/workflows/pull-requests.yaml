@@ -11,7 +11,7 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v11
         with:
-          urls: "https://www.eearomatics.com"
+          urls: "https://www.eearomatics.com?utm_source=lhci-testing"
           uploadArtifacts: true
           temporaryPublicStorage: true
           configPath: 'lighthouserc.js'
