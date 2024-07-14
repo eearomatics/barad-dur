@@ -1,8 +1,10 @@
 [![Website Badge](https://img.shields.io/badge/Website-eearomatics.com-white?style=for-the-badge&logo=square&logoColor=%23ffffff&labelColor=%23bebba8)](https://www.eearomatics.com)
 
-# site-scoring
+# Barad-dûr
 
-Site Scoring is a utility repository for the organization to test and validate the site.
+> He is always watching, from the tower of Barad-dûr
+
+This project is a utility repository for the organization to test, validate, and benchmark the performance of our website.
 
 ## How It Works
 
@@ -19,4 +21,4 @@ The second Action runs Lighthouse CI against all URLs found in the first Action.
 
 The workflow is triggered by pushes to the `main` branch to support changes to the workflow as well as by a cron job.
 
-The job executes every day at 0500 UTC.
+The job executes the first of every month at 0500 UTC.
