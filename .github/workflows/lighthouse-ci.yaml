@@ -1,7 +1,8 @@
 name: Lighthouse CI
 on:
-  schedule:
-    - cron: "0 5 1 * *" # start of month
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "0 5 1 * *" # start of month
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
